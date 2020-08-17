@@ -15,5 +15,4 @@ app.use(todosRoutes.routes());
 
 app.use(todosRoutes.allowedMethods());
 
-// 8000 is a common development port
 await app.listen({ port: 8000 });
