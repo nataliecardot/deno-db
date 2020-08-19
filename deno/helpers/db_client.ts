@@ -1,7 +1,7 @@
 import {
   MongoClient,
   Database,
-} from "https://deno.land/x/mongo@v0.10.0/mod.ts";
+} from "https://deno.land/x/mongo@v0.8.0/mod.ts";
 
 let db: Database;
 
@@ -14,10 +14,10 @@ let db: Database;
 
 export function connect() {
   const client = new MongoClient();
-  // // Replace password
-  // client.connectWithUri(
-  //   "mongodb+srv://natalie:<password>@cluster0-4yuid.mongodb.net?retryWrites=true&w=majority",
-  // );
+  // NOTE! Replace password
+  client.connectWithUri(
+    "mongodb+srv://natalie:<password>@cluster0-4yuid.mongodb.net/?retryWrites=true&w=majority",
+  );
 
   db = client.database("todos-app-deno");
 }

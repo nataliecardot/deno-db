@@ -3,7 +3,7 @@ import { Application } from "https://deno.land/x/oak/mod.ts";
 // File extension must be included when working with Deno
 import todosRoutes from "./routes/todos.ts";
 // Need curly braces because connect is a named export (because have export keyword in front of function declaration and exporting multiple things from file)
-import { connect } from "./helpers/db_cient.ts";
+import { connect } from "./helpers/db_client.ts";
 
 connect();
 
